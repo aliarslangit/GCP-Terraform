@@ -5,36 +5,36 @@ provider "google" {
 resource "google_compute_network" "vpc_network1" {
   name = "terraform-network1"
 }
-# resource "google_compute_instance" "default" {
-#   name         = "test"
-#   machine_type = "e2-medium"
-#   zone         = "asia-east1"
+resource "google_compute_instance" "default" {
+  name         = "test"
+  machine_type = "e2-medium"
+  zone         = "asia-east1"
 
-#   tags = ["foo", "bar"]
+  tags = ["foo", "bar"]
 
-#   boot_disk {
-#     initialize_params {
-#       image = "debian-cloud/debian-9"
-#     }
-#   }
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
 
-#   // Local SSD disk
-#   scratch_disk {
-#     interface = "SCSI"
-#   }
+  // Local SSD disk
+  scratch_disk {
+    interface = "SCSI"
+  }
 
-#   network_interface {
-#     network = "default"
+  network_interface {
+    network = "default"
 
-#     access_config {
-#       // Ephemeral public IP
-#     }
-#   }
+    access_config {
+      // Ephemeral public IP
+    }
+  }
 
-#   metadata = {
-#     foo = "bar"
-#   }
+  metadata = {
+    foo = "bar"
+  }
 
-#   metadata_startup_script = "echo hi > /test.txt"
+  metadata_startup_script = "echo hi > /test.txt"
 
-# }
+}
