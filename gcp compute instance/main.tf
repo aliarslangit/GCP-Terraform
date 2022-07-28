@@ -1,6 +1,6 @@
 provider "google" {
   credentials = file("gcp-creds.json")
-  project     = "demo-cloud"
+  project     = "systems-cloud"
 }
 resource "google_compute_network" "vpc_network1" {
   name = "terraform-network1"
