@@ -1,6 +1,7 @@
 provider "google" {
-  credentials = file("gcp-creds.json")
-  project     = "systems-cloud"
+  project = "gcp-project-01"
+  region  = "us-central1"
+  zone    = "us-central1-c"
 }
 resource "google_storage_bucket" "bucket" {
   name     = "test-bucket"
