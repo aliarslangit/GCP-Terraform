@@ -1,9 +1,7 @@
-variable "vm_name"
-{
+variable "vm_name"{
 default =  "demo-vm"
 }
 
-variable "location"
-{
+variable "location"{
 default = "east-us-1"
 }
